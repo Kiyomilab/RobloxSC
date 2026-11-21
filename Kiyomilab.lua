@@ -58,7 +58,7 @@ if LocalPlayer.MembershipType == Enum.MembershipType.Premium then
     membershipType = "Premium"
 end
 
-local LOGO_ID = "rbxassetid://127057318506760"
+local LOGO_ID = "rbxthumb://type=Asset&id=127057318506760&w=150&h=150"
 
 -- Konfigurasi Window Dikunci 100%
 local Window = WindUI:CreateWindow({
