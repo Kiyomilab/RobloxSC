@@ -1,12 +1,12 @@
--- KiyomilabWindUI.lua (Base UI Paten - Upload ke GitHub Kiyomilab/RobloxSC)
+-- KiyomilabWindUI.lua (Base UI Paten - Kiyomilab/RobloxSC)
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
 local WindUI
 local urls = {
-    "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua",
     "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua",
+    "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua",
 }
 
 for _, url in ipairs(urls) do
@@ -28,7 +28,6 @@ if not WindUI then
     return nil
 end
 
--- Tema Paten Kiyomilab Crimson
 WindUI:AddTheme({
     Name = "KiyomilabCrimson",
     Accent = Color3.fromHex("#DC183A"),
@@ -41,7 +40,6 @@ WindUI:AddTheme({
     Icon = Color3.fromHex("#E8C37D"),
 })
 
--- Ambil Nama Game Otomatis dari PlaceId (Anti-Error)
 local GameName = "Place ID: " .. tostring(game.PlaceId)
 if game.PlaceId and game.PlaceId > 0 then
     local ok, info = pcall(function()
@@ -52,7 +50,6 @@ if game.PlaceId and game.PlaceId > 0 then
     end
 end
 
--- Deteksi Keanggotaan Pemain untuk Subtitle User Panel
 local membershipType = "Player"
 if LocalPlayer.MembershipType == Enum.MembershipType.Premium then
     membershipType = "Premium"
@@ -60,7 +57,6 @@ end
 
 local LOGO_ID = "rbxassetid://112254870732879"
 
--- Konfigurasi Window Dikunci 100%
 local Window = WindUI:CreateWindow({
     Title = "Kiyomilab",
     Icon = LOGO_ID,
